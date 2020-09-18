@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8)
+
+project("Cryptopals")
+
+option(DEBUG "Use debug symbols" ON)
+if(DEFINED DEBUG)
+	# Turn on debug symbols
+	set(CMAKE_BUILD_TYPE Debug)
+endif()
+
+add_subdirectory(libcrypto)
+add_subdirectory(set1)
